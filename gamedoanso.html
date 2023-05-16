@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Game đoán số :></h1>
+    <button type="button " onclick="number()">Chơi</button>
+    <script>
+        function number(){
+            let number1 = parseInt(prompt("Nhập vào khoảng bạn muốn đoán:"))
+            let choicenumber = Math.floor(Math.random()* number1) +1 ;
+            let remain = 3 ;
+            let number2;
+            while (remain > 0) {
+                 number2 = parseInt(prompt("Nhập số bạn đoán vào đây:")) ;
+                if (number2 === choicenumber) {
+                    alert ("Số đoán chính xác") ;
+                    break ;
+                } else if (number2 < choicenumber){
+                    alert ("số của bạn cần phải lớn hơn") ;
+                    
+                }
+                 else if (number2 > choicenumber) {
+                    alert("Số của bạn cần phải nhỏ hơn") ;
+                }
+              remain -- ;
+            }
+             if (remain === 0){
+                    alert("Bạn đã hết số lần đoán. Số đúng là:" + choicenumber)
+                }
+        }
+    </script>
+</body>
+</html>
