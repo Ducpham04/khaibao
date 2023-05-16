@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dãy fibonacci</h1>
+    <p id="fibosequence"></p>
+
+    <script>
+     let fibo = parseInt(prompt("Nhập vào số để in ra dãy fibonacci:")) ;
+     let n1=1 ;
+     let n2= 0 ;
+     let sum ;
+     let sequence = "" ;
+        while (fibo >0) {
+            sequence += sum +", " ;
+            sum = n1 + n2 ;
+            n1 = n2 ;
+            n2 = sum ;
+            fibo -- ;
+        } 
+        document.getElementById("fibosequence").innerText = "Dãy fibonacci" + sequence ;
+
+    </script>
+</body>
+</html>
