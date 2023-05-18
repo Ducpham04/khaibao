@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {padding-top:50px}
+     </style>
+
+</head>
+<body>
+    <label for="text1">Sample Screen:</label>
+    <input type="text" id="text1">
+    <button type="button" onclick="add_arraay()" value="add">Add</button>
+    <button type="button" onclick="display_array()" value="display">Display</button>
+    <p id="result"></p>
+    <script>
+    let x = 0 ;
+    let array = Array() ;
+function add_arraay() {
+    
+    array[x] = document.getElementById("text1").value ;
+    alert("Elemnet: " + array[x] +" added at index " + x);
+    x++ ;
+    document.getElementById("text1").value = ""
+
+}
+function display_array () {
+    let e = "<hr/>"; 
+    for(i= 0; i <= array.length ; i++){
+        e += "Element" + i + "=" + array[i] + "<br/>" ;
+    }
+    document.getElementById("result").innerHTML= "III"+ e ;
+}
+</script>
+</body>
+</html> 
+</body>
+</html>
